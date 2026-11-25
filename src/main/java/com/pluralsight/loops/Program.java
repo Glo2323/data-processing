@@ -32,7 +32,7 @@ public class Program {
         String firstName = input.nextLine();
         //?Looping through the list of people using the users answer to find matching names
         for (Person person : people) {
-            if (person.getFirstName().equals(firstName)) {
+            if (person.getFirstName().equalsIgnoreCase(firstName)) {
                 System.out.println(person.getFirstName());
             }
         }
@@ -41,7 +41,7 @@ public class Program {
         String lastName = input.nextLine();
         //?Looping through the list of people using the users answer to find matching names
         for (Person person : people) {
-            if (person.getLastName().equals(lastName)) {
+            if (person.getLastName().equalsIgnoreCase(lastName)) {
                 System.out.println(person.getLastName());
             }
         }

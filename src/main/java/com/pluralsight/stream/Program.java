@@ -47,7 +47,9 @@ public class Program {
 
         //?Looping through people's ages to calculate the average with a stream
        double averageAge =  people.stream()
+               //*Grab the double age from person
                 .mapToInt(Person::getAge)
+               //*Finding the average
                 .average()
                 .orElse(0);
 
@@ -56,14 +58,18 @@ public class Program {
 
         //?Looping through the ages to calculate the max with a stream
         double maxAge = people.stream()
+                //*Grab the double age from person
                 .mapToInt(Person::getAge)
+                //*Finding the max
                 .max()
                 .orElse(0);
         System.out.println(maxAge);
 
         //?Looping through the ages to calculate the min with a stream
         double minAge = people.stream()
+                //*Grab the double age from person
                 .mapToInt(Person::getAge)
+                //*Finding the min
                 .min()
                 .orElse(0);
         System.out.println(minAge);
